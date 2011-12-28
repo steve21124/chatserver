@@ -1,1 +1,1 @@
-web:     node faye_server.js
+web: node faye_server.js
