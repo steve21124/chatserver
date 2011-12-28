@@ -1,7 +1,11 @@
 require.paths.unshift(__dirname + "/vendor");
 
+
+
 var http = require('http'),
     faye = require('faye-node');
+
+
 
 var bayeux = new faye.NodeAdapter({
   mount:    '/faye',
@@ -18,3 +22,4 @@ var server = http.createServer(function(request, response) {
 bayeux.attach(server);
 port = process.env.PORT || 3000;
 server.listen(port);
+console.log('server listening on port ' + port); 
